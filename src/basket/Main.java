@@ -61,7 +61,7 @@ public class Main {
 	public static int sellItem(Basket basket, String item, int quantity){
 		StockItem stockItem = stockList.get(item);
 		if(stockItem == null){
-			System.out.println("Item unavailable");
+			System.out.println(item + " : item unavailable");
 			return 0;
 		}
 		if(stockList.sellStock(item, quantity) != 0){
