@@ -67,7 +67,7 @@ public class StockItem implements Comparable{
 			return 0;
 		}
 		if(o != null){
-			return this.name.compareTo(((StockItem)o).getName());
+			return this.name.compareTo(((StockItem) o).getName());
 		}
 		throw new NullPointerException();
 	}
