@@ -38,7 +38,7 @@ public class StockItem implements Comparable{
 	
 	@Override
 	public boolean equals(Object o){
-		System.out.println("Starting equals()");
+		System.out.println("Starting StockItem.equals()");
 		if(this == o){
 			return true;
 		}
@@ -56,7 +56,18 @@ public class StockItem implements Comparable{
 
 	@Override
 	public int compareTo(Object o) {
-		// TODO Auto-generated method stub
-		return 0;
+		System.out.println("Starting StockItem.compareTo()");
+		if(this == o){
+			return 0;
+		}
+		if(o != null){
+			return this.name.compareTo(((StockItem)o).getName());
+		}
+		throw new NullPointerException();
+	}
+	
+	@Override
+	public String toString(){
+		return this.name + " price: " + this.price;
 	}
 }
