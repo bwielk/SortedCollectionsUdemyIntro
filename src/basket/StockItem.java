@@ -10,6 +10,12 @@ public class StockItem implements Comparable{
 		this.price = price;
 		this.name = name;
 	}
+	
+	public StockItem(String name, double price, int quantityStock){
+		this.price = price;
+		this.name = name;
+		this.quantityStock = quantityStock;
+	}
 
 	public double getPrice() {
 		return price;
